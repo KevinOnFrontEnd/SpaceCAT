@@ -19,5 +19,7 @@ Add configuration to appsettings.json
 
 # Usage
 Inject ISpaceCATClient
-var (cat, httpResponse) = client.GetCAT("YOUR ASSET ID")
 
+```C#
+var (cat, httpResponse) = client.GetCAT("YOUR ASSET ID")
+```

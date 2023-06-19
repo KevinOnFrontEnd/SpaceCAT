@@ -16,3 +16,8 @@ Add configuration to appsettings.json
     "ApiEndPoint": "https://api2.spacescan.io/v0.1/xch/cat"
   }
 ```
+
+# Usage
+Inject ISpaceCATClient
+var (cat, httpResponse) = client.GetCAT("YOUR ASSET ID")
+

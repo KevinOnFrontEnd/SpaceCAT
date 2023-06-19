@@ -1,2 +1,13 @@
 # SpaceCAT
-Unofficial .NET Spacescan CAT v1 Alpha API Client
+Simple HttpClient for interacting with spacescan.io CAT API to fetch CAT Details.
+
+
+# Setup
+```C#
+{
+    services.Configure<SpaceScanOptions>(hostContext.Configuration.GetSection("SpaceCAT"));
+    services.AddSpaceCATClient();
+}
+```
+
+Add configuration to appsettings.json

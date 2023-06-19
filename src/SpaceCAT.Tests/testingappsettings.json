@@ -1,0 +1,5 @@
+{
+  "SpaceCAT": {
+    "ApiEndPoint": "https://api2.spacescan.io/v0.1/xch/cat"
+  }
+}

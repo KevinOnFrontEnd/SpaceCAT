@@ -9,7 +9,7 @@ public class CAT
     public string price_xch { get; set; }
     public string issued_time { get; set; }
     public string updated { get; set; }
-    public string holders { get; set; }
+    public int holders { get; set; }
     public string lisp { get; set; }
     public string clvm { get; set; }
     public string description { get; set; }

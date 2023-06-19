@@ -4,5 +4,5 @@ namespace SpaceCAT;
 
 public interface ISpaceCATClient
 {
-    Task<CAT> GetCAT(string asset_id);
+    Task<(CAT,HttpResponseMessage)> GetCAT(string asset_id);
 }

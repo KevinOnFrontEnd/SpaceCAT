@@ -23,3 +23,6 @@ Inject ISpaceCATClient into required class.
 ```C#
 var (cat, httpResponse) = client.GetCAT("YOUR ASSET ID")
 ```
+
+# Build Status
+![Build](https://github.com/kevinonfrontend/SpaceCAT/actions/workflows/build_and_test.yml/badge.svg)

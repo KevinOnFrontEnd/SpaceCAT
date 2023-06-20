@@ -10,6 +10,7 @@ Simple HttpClient for interacting with spacescan.io CAT API to fetch CAT Details
 }
 ```
 
+## Mainnet
 Add configuration to appsettings.json
 ```JSON
   "SpaceCAT": {

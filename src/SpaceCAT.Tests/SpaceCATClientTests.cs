@@ -18,7 +18,7 @@ public class SpaceCATClientTests : TestBase
         var assetId = "db1a9020d48d9d4ad22631b66ab4b9ebd3637ef7758ad38881348c5d24c38f20"; //Dexie bucks (DBX)
 
         // act
-        var (_, httpResponse) = await Client.GetCAT(assetId);
+        var (catobj, httpResponse) = await Client.GetCAT(assetId);
         var json = await httpResponse.Content.ReadAsStringAsync();
         var job = JObject.Parse(json);
         var cats = JArray.Parse(job.GetValue("cat").ToString());
@@ -41,6 +41,15 @@ public class SpaceCATClientTests : TestBase
         cat.Should().HaveElement("txns_count");
         cat.Should().HaveElement("txns_amount");
         cat.Should().HaveElement("logo");
-        //cat.Should().HaveCount(16);
+        cat.Should().HaveElement("twitter");
+        cat.Should().HaveElement("discord");
+        cat.Should().HaveElement("website");
+        cat.Should().HaveElement("whitepaper");
+        cat.Should().HaveElement("reddit");
+        cat.Should().HaveElement("cat_type");
+        cat.Should().HaveElement("cat_description");
+        cat.Should().HaveElement("details");
+        cat.Should().HaveCount(24);
     }
 }
+

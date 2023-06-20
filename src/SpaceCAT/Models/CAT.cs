@@ -5,10 +5,10 @@ public class CAT
     public string asset_id { get; set; }
     public string asset_name { get; set; }
     public string symbol { get; set; }
-    public string price_usd { get; set; }
-    public string price_xch { get; set; }
-    public string issued_time { get; set; }
-    public string updated { get; set; }
+    public decimal price_usd { get; set; }
+    public decimal price_xch { get; set; }
+    public int issued_time { get; set; }
+    public int updated { get; set; }
     public int holders { get; set; }
     public string lisp { get; set; }
     public string clvm { get; set; }
@@ -18,4 +18,11 @@ public class CAT
     public string txns_count { get; set; }
     public string txns_amount { get; set; }
     public string logo { get; set; }
+    public string discord { get; set; }
+    public string website { get; set; }
+    public string whitepaper { get; set; }
+    public string reddit { get; set; }
+    public string cat_type { get; set; }
+    public string cat_description { get; set; }
+    public string details { get; set; }
 }

@@ -8,10 +8,10 @@
 
     <PropertyGroup>
         <PackageId>SpaceCAT</PackageId>
-        <Version>0.0.1</Version>
+        <Version>0.0.2</Version>
         <Authors>KevinOnFrontEnd</Authors>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <projectUrl>https://github.com/KevinOnFrontEnd/SpaceCAT</projectUrl>
+        <ProjectUrl>https://github.com/KevinOnFrontEnd/SpaceCAT</ProjectUrl>
         <RepositoryUrl>https://github.com/KevinOnFrontEnd/SpaceCAT</RepositoryUrl>
         <PackageTags>Spacescan;chia;cat;spacecat;spacescan client</PackageTags>
         <PackageReadmeFile>./README.md</PackageReadmeFile>

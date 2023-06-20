@@ -7,9 +7,9 @@ public class CAT
     public string symbol { get; set; }
     public decimal price_usd { get; set; }
     public decimal price_xch { get; set; }
-    public int issued_time { get; set; }
-    public int updated { get; set; }
-    public int holders { get; set; }
+    public int? issued_time { get; set; }
+    public int? updated { get; set; }
+    public int? holders { get; set; }
     public string lisp { get; set; }
     public string clvm { get; set; }
     public string description { get; set; }

@@ -14,6 +14,8 @@ public static class Extensions
             throw new ArgumentException("SpaceCAT Configuration section missing!");
         if (string.IsNullOrEmpty(spaceScanOptions?.ApiEndpoint))
             throw new ArgumentException("SpaceCAT.ApiEndpoint not defined");
+        if (string.IsNullOrEmpty(spaceScanOptions?.AuthKey))
+            throw new ArgumentException("SpaceCAT.AuthKey not defined");
         
         services.AddHttpClient<ISpaceCATClient, SpaceCATClient>(c =>
         {

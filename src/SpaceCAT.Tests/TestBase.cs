@@ -32,9 +32,11 @@ public class TestBase : IClassFixture<SpaceCATTestFixture>
             {
                 configurationBuilder.SetBasePath(Directory.GetCurrentDirectory());
                 configurationBuilder.AddJsonFile("testingappsettings.json", optional: false);
+                configurationBuilder.AddEnvironmentVariables();
+                configurationBuilder.AddUserSecrets(nameof(SpaceScanOptions));
             });
-            
-            
+
+
         }).ConfigureWebHost(host =>
         {
              host.ConfigureServices((hostContext, services) =>

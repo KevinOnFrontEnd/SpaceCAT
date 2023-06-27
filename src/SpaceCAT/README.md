@@ -1,1 +1,1 @@
-SpaceCAT is the unofficial Spacescan.io CAT api client enabling .NET developers to fetch CAT information from Spacescan.
+SpaceCAT is the unofficial Spacescan.io api client enabling .NET developers to interact with spacescan api

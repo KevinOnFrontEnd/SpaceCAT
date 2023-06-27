@@ -24,9 +24,9 @@ public class CAT
 public class IssuedCoin
 {
     public string coin_name { get; set; }
-    public int confirmed_index { get; set; }
+    public int? confirmed_index { get; set; }
     public int spent_index { get; set; }
-    public bool coinbase { get; set; }
+    public bool? coinbase { get; set; }
     public string puzzle_hash { get; set; }
     public string coin_parent { get; set; }
     public Int64 amount { get; set; }
@@ -34,7 +34,7 @@ public class IssuedCoin
     public string coin_info { get; set; }
     public string extra_info { get; set; }
     public string from_puzzle_hash { get; set; }
-    public DateTime confirmed_time { get; set; }
+    public DateTime? confirmed_time { get; set; }
     public DateTime? spend_time { get; set; }
     public string type { get; set; }
 }

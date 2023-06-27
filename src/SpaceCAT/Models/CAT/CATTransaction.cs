@@ -8,7 +8,7 @@ public class CATTransaction
     public CATTransactionSender sender { get; set; }
     public decimal amount { get; set; }
     public string type { get; set; }
-    public int timestamp { get; set; }
+    public int? timestamp { get; set; }
     public DateTime? confirmed_time { set; get; }
     public DateTime? spend_time { get; set; }
 }

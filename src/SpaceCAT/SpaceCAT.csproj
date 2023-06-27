@@ -8,7 +8,7 @@
 
     <PropertyGroup>
         <PackageId>SpaceCAT</PackageId>
-        <Version>0.0.3</Version>
+        <Version>0.0.4</Version>
         <Authors>KevinOnFrontEnd</Authors>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <ProjectUrl>https://github.com/KevinOnFrontEnd/SpaceCAT</ProjectUrl>
@@ -16,7 +16,7 @@
         <PackageTags>Spacescan;chia;cat;spacecat;spacescan client</PackageTags>
         <PackageReadmeFile>./README.md</PackageReadmeFile>
         <PackageLicenseFile>./LICENSE.md</PackageLicenseFile>
-        <Description>Unofficial client to interact with Spacescan public v1 alpha api</Description>
+        <Description>Unofficial client to interact with Spacescan public api</Description>
         <RepositoryType>git</RepositoryType>
     </PropertyGroup>
     

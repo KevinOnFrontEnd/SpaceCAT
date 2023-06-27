@@ -14,8 +14,10 @@ Simple HttpClient for interacting with spacescan.io CAT API to fetch CAT Details
 Add configuration to appsettings.json
 ```JSON
   "SpaceCAT": {
-    "ApiEndPoint": "https://api2.spacescan.io/v0.1/xch/cat"
-  }
+    "ApiEndPoint": "https://api.spacescan.io",
+    "AuthKey": "YOUR auth key acquired from spacescan  (https://test.spacescan.io/manage-userinfo)",
+    "Network" : "mainnet"
+}
 ```
 
 # Usage

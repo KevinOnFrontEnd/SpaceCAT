@@ -1,5 +1,5 @@
 # 0.0.3 (2023-06-27)
-[Compare `@KevinOnFrontEnd/SpaceCAT` versions 0.0.2 and 0.0.3](https://github.com/kevinonfrontend/SpaceCAT/compare/0.0.2...0.0.3)
+[Compare `@KevinOnFrontEnd/SpaceCAT` versions 0.0.2 and 0.0.4](https://github.com/kevinonfrontend/SpaceCAT/compare/0.0.2...0.0.4)
 
 ## Changes
 - Update api client to use new spacescan.io API endpoints for cat data.
@@ -9,6 +9,7 @@
 - Tests and methods to call /address endpoints (issued-cats, transactions, balance)
 
 ## Bug Fixes
+- Made properties of response models nullable.
 
 ---
 

@@ -1,5 +1,5 @@
 # 0.0.3 (2023-06-27)
-[Compare `@KevinOnFrontEnd/SpaceCAT` versions 0.0.3 and 0.0.2](https://github.com/kevinonfrontend/SpaceCAT/compare/0.0.3...0.0.2)
+[Compare `@KevinOnFrontEnd/SpaceCAT` versions 0.0.2 and 0.0.3](https://github.com/kevinonfrontend/SpaceCAT/compare/0.0.2...0.0.3)
 
 ## Changes
 - Update api client to use new spacescan.io API endpoints for cat data.

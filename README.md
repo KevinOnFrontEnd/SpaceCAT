@@ -24,7 +24,20 @@ Add configuration to appsettings.json
 Inject ISpaceCATClient into required class.
 
 ```C#
+//cat
 var (cat, httpResponse) = client.GetCAT("YOUR ASSET ID")
+var (ranks, httpResponse) = await Client.GetCATRanks();
+var (holders, httpResponse) = await Client.GetCATHolders(assetId);
+var (transactions, httpResponse) = await Client.GetCATTransactions(assetId);
+
+//address
+var (balances, httpResponse) = await Client.GetAddressBalance(address);
+var (issuedcats, httpResponse) = await Client.GetAddressIssuedCATS(address);
+
+//stats
+var (price, httpResponse) = await Client.GetPrice();
+var (totalsupply, httpResponse) = await Client.GetTotalSupply();
+
 ```
 
 # Build Status

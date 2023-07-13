@@ -86,4 +86,31 @@ public partial class SpaceCATClientTests : TestBase
         social.Should().HaveElement("verified");
         social.Should().HaveCount(6);
     }
+    
+    [Fact]
+    [Trait("Category", "Schema")]
+    public async Task getresolveaddressname_matches_expected_schema()
+    {
+        // arrange
+        var name = "kevinonfrontend.xch"; 
+    
+        // act
+        var (namesobj, httpResponse) = await Client.GetResolveAddressName(name);
+        
+        // Asssert
+        var json = await httpResponse.Content.ReadAsStringAsync();
+        var job = JObject.Parse(json);
+        var names = JArray.Parse(job.GetValue("data").ToString());
+        var nameobj = names?.First();
+
+        nameobj.Should().HaveElement("name");
+        nameobj.Should().HaveElement("address");
+        nameobj.Should().HaveElement("nft_coin_id");
+        nameobj.Should().HaveElement("created_block");
+        nameobj.Should().HaveElement("expiry_block");
+        nameobj.Should().HaveElement("expiry_date");
+        nameobj.Should().HaveElement("registry");
+        nameobj.Should().HaveElement("details");
+        nameobj.Should().HaveCount(8);
+    }
 }

@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using SpaceCAT.Models;
 using SpaceCAT.Models.Address;
 using SpaceCAT.Models.CAT;
+using SpaceCAT.Models.DID;
 using SpaceCAT.Models.Stats;
 
 namespace SpaceCAT;
@@ -85,7 +86,7 @@ public class SpaceCATClient : ISpaceCATClient
         return (cats, response);
     }
     
-    public async Task<(AddressTransaction, HttpResponseMessage)> GetAddressTransactions(string address)
+    public async Task<(XCHTransactions, HttpResponseMessage)> GetAddressTransactions(string address)
     {
         var response = await _client.GetAsync($"{_options.Value.ApiEndpoint}/address/transactions/{address}?authkey={_options.Value.AuthKey}&version=0.1.0&network={_options.Value.Network}");
         string responseBody = await response.Content.ReadAsStringAsync();
@@ -93,6 +94,16 @@ public class SpaceCATClient : ISpaceCATClient
         var item = JsonConvert.DeserializeObject<AddressTransactionsResponse>(responseBody);
         var cats = item?.Data;
         return (cats, response);
+    }
+
+    public async Task<(AddressName[], HttpResponseMessage)> GetResolveAddressName(string name)
+    {
+        var response = await _client.GetAsync($"{_options.Value.ApiEndpoint}/address/resolve/{name}?authkey={_options.Value.AuthKey}&version=0.1.0&network={_options.Value.Network}");
+        string responseBody = await response.Content.ReadAsStringAsync();
+        _logger?.LogInformation(responseBody);
+        var item = JsonConvert.DeserializeObject<AddressNameResponse>(responseBody);
+        var address = item?.Data;
+        return (address, response);
     }
     #endregion
 
@@ -116,6 +127,16 @@ public class SpaceCATClient : ISpaceCATClient
         var price = item?.Data;
         return (price, response);
     }
-    
+
+    public async Task<(DIDInfo, HttpResponseMessage)> GetDIDInfo(string did)
+    {
+        var response = await _client.GetAsync($"{_options.Value.ApiEndpoint}/did/info/{did}?authkey={_options.Value.AuthKey}&version=0.1.0&network={_options.Value.Network}");
+        string responseBody = await response.Content.ReadAsStringAsync();
+        _logger?.LogInformation(responseBody);
+        var item = JsonConvert.DeserializeObject<GetDIDInfoResponse>(responseBody);
+        var didInfo = item?.Data;
+        return (didInfo, response);
+    }
+
     #endregion
 }
